@@ -47,14 +47,21 @@ body {
     align-items: center;
 }
 
+/* Estilos de Logo */
 .logo {
-    color: var(--blanco-puro);
-    font-size: 1.5rem;
-    font-weight: 800;
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: var(--dorado-mate);
+.logo img {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -295,13 +302,9 @@ footer {
     margin-bottom: 2rem;
 }
 
-.footer-brand h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.footer-brand span {
-    color: var(--dorado-mate);
+.footer-logo {
+    height: 80px;
+    margin-bottom: 1rem;
 }
 
 .footer-brand p {
@@ -318,6 +321,35 @@ footer {
 
 .social-links a:hover {
     color: var(--dorado-mate);
+}
+
+/* Contacto Footer */
+.footer-contact h4 {
+    color: var(--dorado-mate);
+    margin-bottom: 1rem;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--texto-gris);
+}
+
+.footer-contact a {
+    color: var(--texto-gris);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--dorado-mate);
+}
+
+.footer-contact i {
+    color: var(--dorado-mate);
+    font-size: 1.2rem;
 }
 
 .footer-payments h4 {
@@ -346,9 +378,10 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
-    .nav-links { display: none; /* En un proyecto real se añadiría un menú hamburguesa aquí */ }
+    .nav-links { display: none; }
     .solution-card.featured { transform: scale(1); }
     .solution-card.featured:hover { transform: translateY(-10px); }
     .footer-content { flex-direction: column; text-align: center; }
     .payment-icons { justify-content: center; }
+    .footer-contact p { justify-content: center; }
 }
