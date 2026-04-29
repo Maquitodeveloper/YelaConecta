@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda | PR 360 Digital Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>PR 360 | Hub de Blindaje Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,93 +17,116 @@
 
     <div class="cart-sidebar" id="cart-sidebar">
         <div class="cart-header">
-            <h3>Portafolio Seleccionado</h3>
+            <h3>Servicios Seleccionados</h3>
             <button class="close-cart" id="close-cart-btn">✕</button>
         </div>
-        <div class="cart-items-container" id="cart-items-list">
-            </div>
+        <div class="cart-items-container" id="cart-items-list"></div>
         <div class="cart-footer">
             <div class="cart-summary">
-                <div class="summary-row">
-                    <span>Subtotal:</span>
-                    <span id="cart-subtotal">$0.00</span>
-                </div>
-                <div class="summary-row total-row">
+                <div class="total-row">
                     <span>Inversión Total:</span>
                     <span id="cart-total-price">$0.00</span>
                 </div>
             </div>
-            <button class="btn btn-primary btn-block" id="checkout-btn">Procesar Contratación Segura</button>
+            <button class="btn btn-primary btn-block" id="checkout-btn">Finalizar en WhatsApp</button>
         </div>
     </div>
 
-    <header class="shop-header">
+    <header class="hero">
         <div class="container">
-            <h1>PR 360 E-Commerce Hub</h1>
-            <p>Soluciones de blindaje reputacional y gestión de activos digitales para VIPs y directivos.</p>
+            <div class="hero-content">
+                <h1>Protección y Desarrollo 360</h1>
+                <p>Fusionamos 13 años de experiencia en seguridad de alto nivel con desarrollo Full Stack para blindar el activo más valioso de su empresa: <strong>Su Reputación Digital.</strong></p>
+                <div class="hero-actions">
+                    <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
+                    <a href="https://wa.me/584129884284" class="btn btn-outline-white">Contacto Directo</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="store-section">
+    <section class="value-proposition">
         <div class="container">
-            
+            <div class="section-title">
+                <h2>¿Cómo ayudamos a su negocio?</h2>
+                <p>No solo construimos código, creamos entornos seguros y reputaciones inquebrantables.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Blindaje Reputacional</h3>
+                    <p>Aplicamos tácticas de protección ejecutiva al mundo digital, neutralizando crisis antes de que afecten su marca.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Desarrollo Full Stack</h3>
+                    <p>Sistemas robustos, escalables y con arquitectura limpia bajo estándares modernos (React, Node, Firebase).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Estrategia de Activos</h3>
+                    <p>Transformamos su presencia online en una herramienta de captación de alto valor y confianza corporativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="store-section" id="catalogo">
+        <div class="container">
             <div class="store-filters">
-                <button class="filter-btn active" data-filter="todos">Todo el Catálogo</button>
-                <button class="filter-btn" data-filter="digital">Activos Digitales</button>
-                <button class="filter-btn" data-filter="auditoria">Auditorías</button>
-                <button class="filter-btn" data-filter="vip">Consultoría VIP</button>
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="desarrollo">Desarrollo</button>
+                <button class="filter-btn" data-filter="seguridad">Seguridad/PR</button>
             </div>
 
             <div class="grid-products" id="product-grid">
-                
-                <div class="product-card" data-category="digital">
-                    <div class="product-badge">Descarga Inmediata</div>
+                <div class="product-card" data-category="seguridad">
+                    <div class="product-badge">Protocolo VIP</div>
                     <div class="product-content">
-                        <span class="product-sku">SKU: PR-001</span>
-                        <h3>Manual de Gestión de Crisis Digital</h3>
-                        <div class="product-price">$45.00</div>
-                        <p class="product-desc">Protocolos de acción inmediata para contener y neutralizar escenarios adversos. Despliegue rápido para gabinetes.</p>
-                        <ul class="product-features">
-                            <li>✓ Formato PDF Encriptado</li>
-                            <li>✓ 5 Plantillas de Respuesta</li>
-                        </ul>
+                        <h3>Gestión de Crisis & PR Digital</h3>
+                        <div class="product-price">$150.00</div>
+                        <p>Plan de respuesta inmediata ante ataques reputacionales y limpieza de huella digital negativa.</p>
                     </div>
-                    <button class="btn btn-outline add-to-cart-btn" data-id="1" data-name="Manual de Crisis" data-price="45.00">Agregar al Portafolio</button>
+                    <button class="btn btn-outline add-to-cart-btn" data-id="1" data-name="Gestión de Crisis" data-price="150.00">Contratar</button>
                 </div>
 
-                <div class="product-card" data-category="auditoria">
-                    <div class="product-badge advance">Servicio Programado</div>
+                <div class="product-card" data-category="desarrollo">
+                    <div class="product-badge">Full Stack</div>
                     <div class="product-content">
-                        <span class="product-sku">SKU: PR-002</span>
-                        <h3>Auditoría SEO de Imagen Institucional</h3>
-                        <div class="product-price">$350.00</div>
-                        <p class="product-desc">Análisis profundo de vulnerabilidades. Mapeo de riesgos y blindaje en motores de búsqueda.</p>
-                        <ul class="product-features">
-                            <li>✓ Reporte a 72 horas</li>
-                            <li>✓ Mapeo de Algoritmos</li>
-                        </ul>
+                        <h3>Desarrollo de Landing Page Premium</h3>
+                        <div class="product-price">$300.00</div>
+                        <p>Diseño minimalista, optimizado para conversión y con integración de sistemas de contacto directo.</p>
                     </div>
-                    <button class="btn btn-outline add-to-cart-btn" data-id="2" data-name="Auditoría SEO" data-price="350.00">Agregar al Portafolio</button>
+                    <button class="btn btn-outline add-to-cart-btn" data-id="2" data-name="Landing Premium" data-price="300.00">Contratar</button>
                 </div>
 
-                <div class="product-card" data-category="vip">
-                    <div class="product-badge premium">Exclusivo</div>
+                <div class="product-card" data-category="seguridad">
+                    <div class="product-badge">Auditoría</div>
                     <div class="product-content">
-                        <span class="product-sku">SKU: PR-003</span>
-                        <h3>Consultoría 360 y Vocería Digital VIP</h3>
-                        <div class="product-price">$800.00</div>
-                        <p class="product-desc">Acompañamiento premium y protección estratégica para la proyección de liderazgo de altos ejecutivos.</p>
-                        <ul class="product-features">
-                            <li>✓ 4 Sesiones 1-a-1</li>
-                            <li>✓ Confidencialidad Absoluta</li>
-                        </ul>
+                        <h3>Auditoría de Seguridad Digital</h3>
+                        <div class="product-price">$200.00</div>
+                        <p>Análisis de vulnerabilidades en sus plataformas y protocolos de seguridad para personal directivo.</p>
                     </div>
-                    <button class="btn btn-outline add-to-cart-btn" data-id="3" data-name="Consultoría VIP 360" data-price="800.00">Agregar al Portafolio</button>
+                    <button class="btn btn-outline add-to-cart-btn" data-id="3" data-name="Auditoría Seguridad" data-price="200.00">Contratar</button>
                 </div>
-
             </div>
         </div>
     </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h4>YelaConecta | PR 360</h4>
+                    <p>📧 <a href="mailto:yelaconecta@gmail.com">yelaconecta@gmail.com</a></p>
+                    <p>📱 <a href="https://wa.me/584129884284">+58 412-9884284</a></p>
+                </div>
+                <div class="footer-brand">
+                    <p>&copy; 2026 Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
