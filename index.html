@@ -3,135 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PR 360 Digital Hub | YelaConecta</title>
-    <!-- Google Fonts: Inter para una tipografía moderna y corporativa -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome para la iconografía tecnológica -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS CSS para animaciones fluidas al navegar -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Referencia al archivo CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Tienda | PR 360 Digital Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navegación Principal -->
-    <nav id="navbar">
-        <div class="container nav-content">
-            <a href="#inicio" class="logo">
-                <img src="logo.png.jpeg" alt="PR 360 Digital Hub Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#soluciones">Soluciones</a></li>
-                <li><a href="#autoridad">PR 360 Digital Hub</a></li>
-                <!-- Enlace directo a WhatsApp -->
-                <li><a href="https://wa.me/584129884284" target="_blank" class="btn-outline">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="cart-floating-btn" id="open-cart-btn">
+        <span class="icon">💼</span>
+        <div class="cart-count" id="cart-count-badge">0</div>
+    </div>
 
-    <!-- 1. Encabezado (Hero Section) -->
-    <header class="hero" id="inicio">
-        <div class="container hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Transformamos la Comunicación Institucional con <span>Inteligencia de Datos</span></h1>
-            <p>Blindaje reputacional, SEO Político y Gestión de Crisis para líderes que deciden el futuro.</p>
-            <a href="https://wa.me/584129884284" target="_blank" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Solicitar Auditoría de Imagen
-            </a>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Portafolio Seleccionado</h3>
+            <button class="close-cart" id="close-cart-btn">✕</button>
+        </div>
+        <div class="cart-items-container" id="cart-items-list">
+            </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Inversión Total:</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn">Procesar Contratación Segura</button>
+        </div>
+    </div>
+
+    <header class="shop-header">
+        <div class="container">
+            <h1>PR 360 E-Commerce Hub</h1>
+            <p>Soluciones de blindaje reputacional y gestión de activos digitales para VIPs y directivos.</p>
         </div>
     </header>
 
-    <!-- 2. Sección de Problema/Dolor -->
-    <section class="problem-section" id="problema">
-        <div class="container" data-aos="fade-up" data-aos-duration="1000">
-            <div class="problem-box">
-                <i class="fa-solid fa-magnifying-glass-chart icon-large"></i>
-                <h2>¿Sabe qué dicen de su institución los algoritmos de búsqueda?</h2>
-                <p>No deje su reputación al azar. En un entorno donde la información se propaga en segundos, el silencio digital y la falta de control sobre su narrativa representan una vulnerabilidad crítica.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Portafolio de Soluciones (Tienda Digital) -->
-    <section class="solutions-section" id="soluciones">
+    <main class="store-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Portafolio Estratégico</h2>
-            <div class="cards-grid">
-                
-                <!-- Producto 1: Infoproducto -->
-                <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-icon"><i class="fa-solid fa-book-shield"></i></div>
-                    <h3>Manual de Gestión de Crisis Digital</h3>
-                    <p>Protocolos accionables para contener y neutralizar amenazas reputacionales antes de que escalen.</p>
-                    <span class="badge">Infoproducto Descargable</span>
-                </div>
-
-                <!-- Producto 2: Servicio Core -->
-                <div class="solution-card featured" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>Auditoría SEO de Imagen Institucional</h3>
-                    <p>Análisis forense de su huella digital y optimización de motores de búsqueda para dominar la primera página de Google.</p>
-                    <span class="badge badge-gold">Servicio Estratégico</span>
-                </div>
-
-                <!-- Producto 3: Consultoría -->
-                <div class="solution-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
-                    <h3>Consultoría 360 y Vocería Digital</h3>
-                    <p>Entrenamiento de alto nivel para directivos y políticos. Proyecte autoridad, claridad y confianza.</p>
-                    <span class="badge">Consultoría Premium</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Sección de Autoridad (Sobre YelaConecta) -->
-    <section class="authority-section" id="autoridad">
-        <div class="container authority-content" data-aos="fade-right" data-aos-duration="1000">
-            <div class="authority-text">
-                <h2>Liderado por <span>PR 360 Digital Hub</span></h2>
-                <p>Expertos en la intersección de la comunicación estratégica y la tecnología. Protegemos el activo más valioso de líderes e instituciones: <strong>su reputación.</strong></p>
-                <p>Desde Caracas con alcance internacional, implementamos metodologías basadas en evidencia y analítica de datos para asegurar que su mensaje domine el entorno digital.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Pie de Página (Footer) -->
-    <footer id="contacto">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <!-- Logo con el nombre de archivo actualizado -->
-                <img src="logo.png.jpeg" alt="PR 360 Logo Footer" class="footer-logo">
-                <p>Caracas, Venezuela | Alcance Internacional</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-contact">
-                <h4>Canales Directos</h4>
-                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/584129884284" target="_blank">+58 412 988 4284</a></p>
-                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:yelaconecta@gmail.com">yelaconecta@gmail.com</a></p>
-            </div>
             
-            <div class="footer-payments">
-                <h4>Métodos de Inversión</h4>
-                <div class="payment-icons">
-                    <span><i class="fa-solid fa-building-columns"></i> Zelle</span>
-                    <span><i class="fa-solid fa-mobile-screen-button"></i> Pago Móvil</span>
-                    <span><i class="fa-brands fa-btc"></i> Binance</span>
+            <div class="store-filters">
+                <button class="filter-btn active" data-filter="todos">Todo el Catálogo</button>
+                <button class="filter-btn" data-filter="digital">Activos Digitales</button>
+                <button class="filter-btn" data-filter="auditoria">Auditorías</button>
+                <button class="filter-btn" data-filter="vip">Consultoría VIP</button>
+            </div>
+
+            <div class="grid-products" id="product-grid">
+                
+                <div class="product-card" data-category="digital">
+                    <div class="product-badge">Descarga Inmediata</div>
+                    <div class="product-content">
+                        <span class="product-sku">SKU: PR-001</span>
+                        <h3>Manual de Gestión de Crisis Digital</h3>
+                        <div class="product-price">$45.00</div>
+                        <p class="product-desc">Protocolos de acción inmediata para contener y neutralizar escenarios adversos. Despliegue rápido para gabinetes.</p>
+                        <ul class="product-features">
+                            <li>✓ Formato PDF Encriptado</li>
+                            <li>✓ 5 Plantillas de Respuesta</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline add-to-cart-btn" data-id="1" data-name="Manual de Crisis" data-price="45.00">Agregar al Portafolio</button>
                 </div>
+
+                <div class="product-card" data-category="auditoria">
+                    <div class="product-badge advance">Servicio Programado</div>
+                    <div class="product-content">
+                        <span class="product-sku">SKU: PR-002</span>
+                        <h3>Auditoría SEO de Imagen Institucional</h3>
+                        <div class="product-price">$350.00</div>
+                        <p class="product-desc">Análisis profundo de vulnerabilidades. Mapeo de riesgos y blindaje en motores de búsqueda.</p>
+                        <ul class="product-features">
+                            <li>✓ Reporte a 72 horas</li>
+                            <li>✓ Mapeo de Algoritmos</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline add-to-cart-btn" data-id="2" data-name="Auditoría SEO" data-price="350.00">Agregar al Portafolio</button>
+                </div>
+
+                <div class="product-card" data-category="vip">
+                    <div class="product-badge premium">Exclusivo</div>
+                    <div class="product-content">
+                        <span class="product-sku">SKU: PR-003</span>
+                        <h3>Consultoría 360 y Vocería Digital VIP</h3>
+                        <div class="product-price">$800.00</div>
+                        <p class="product-desc">Acompañamiento premium y protección estratégica para la proyección de liderazgo de altos ejecutivos.</p>
+                        <ul class="product-features">
+                            <li>✓ 4 Sesiones 1-a-1</li>
+                            <li>✓ Confidencialidad Absoluta</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline add-to-cart-btn" data-id="3" data-name="Consultoría VIP 360" data-price="800.00">Agregar al Portafolio</button>
+                </div>
+
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 PR 360 Digital Hub por YelaConecta. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    </main>
 
-    <!-- Scripts de Librerías -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
